@@ -1,0 +1,52 @@
+
+public class ControlFlowPractice {
+
+	public double calculateCost(double distance) {
+		double cost = 0;
+		if (distance >= 50) {
+			cost = 100;
+		}
+		else if (distance < 50 && distance >= 25) {
+			cost = 50;
+		}
+		else if ( distance < 25 && distance >= 0) {
+			cost = 10;
+		}
+		return cost;
+	}
+	
+	public void rollDice(int value) {
+		switch(value) {
+		case 1:
+			System.out.println("The value rolled is: 1");
+			break;
+		case 2:
+			System.out.println("The value rolled is: 2");
+			break;
+		case 3:
+			System.out.println("The value rolled is: 3");
+			break;
+		case 4:
+			System.out.println("The value rolled is: 4");
+			break;
+		case 5:
+			System.out.println("The value rolled is: 5");
+			break;
+		case 6:
+			System.out.println("The value rolled is: 6");
+			break;
+		default:
+			System.out.println("Choose something else");
+		}
+	}
+	
+	public String findLetterAt(int index, String word) {
+		String letter = "";
+		for (int i = 0; i < word.length(); i++) {
+			if (i == index) {
+				letter = word.substring(index, index + 1);
+			}
+		}
+		return letter;
+	}
+}

@@ -1,0 +1,24 @@
+
+public class ElectronicStore {
+
+	public static double getPrice(String electronic) {
+		if (electronic.equals("IPad")) {
+			return 300.99;
+		}
+		else if (electronic.equals("Macbook")) {
+			return 1000.99;
+		}
+		else if (electronic.equals("TV")) {
+			return 800.99;
+		}
+		else if (electronic.equals("Phone")) {
+			return 900.99;
+		}
+		else if (electronic.equals("Charger")){
+			return 10.99;
+		}
+		else {
+			return 0;
+		}
+	}
+}

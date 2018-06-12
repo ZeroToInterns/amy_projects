@@ -1,0 +1,51 @@
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class Tester {
+
+//	public static void main(String[] args) {
+//		ControlFlowPractice test = new ControlFlowPractice();
+//		System.out.println(test.calculateCost(27));
+//		test.rollDice(5);
+//		System.out.println(test.findLetter("o", "Hello World"));
+//	}
+//
+//}
+
+	@Test
+	public void testCalculateCost() {
+		ControlFlowPractice obj = new ControlFlowPractice();
+		System.out.println(obj.calculateCost(100));
+		assertTrue(obj.calculateCost(100) == 100.0);
+	}
+	@Test
+	public void testCalculateCost1() {
+		ControlFlowPractice obj = new ControlFlowPractice();
+		System.out.println(obj.calculateCost(100));
+		assertTrue(obj.calculateCost(50) == 100.0);
+	}
+	@Test
+	public void testCalculateCost2() {
+		ControlFlowPractice obj = new ControlFlowPractice();
+		System.out.println(obj.calculateCost(100));
+		assertTrue(obj.calculateCost(0) == 10.0);
+	}
+	@Test
+	public void testCalculateCost3() {
+		ControlFlowPractice obj = new ControlFlowPractice();
+		System.out.println(obj.calculateCost(100));
+		assertTrue(obj.calculateCost(25) == 50.0);
+	}
+	@Test
+	public void testCalculateCost4() {
+		ControlFlowPractice obj = new ControlFlowPractice();
+		System.out.println(obj.calculateCost(100));
+		assertTrue(obj.calculateCost(-25) == 0.0);
+	}
+	@Test
+	public void testCalculateCost5() {
+		ControlFlowPractice obj = new ControlFlowPractice();
+		System.out.println(obj.calculateCost(100));
+		assertTrue(obj.calculateCost(200) == 0.0);
+	}
+}

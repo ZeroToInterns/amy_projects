@@ -1,0 +1,69 @@
+
+public class Tester {
+	
+	private static void determineGender(char gender) {
+		if(gender == 'M') {
+			System.out.print("Its a Male");
+		}
+		else if(gender == 'F') {
+			System.out.print("Its a Female");
+		}
+		else {
+			System.out.print("Error: Invalid");
+		}
+		
+	}
+	
+	public static void chooseRoom(String newAnimal, boolean isSick, char gender) {
+		if (isSick) {
+			System.out.println("We cannot accept this animal");
+		}
+		//not sick
+		else {
+			//check if its a dog
+			if(newAnimal.equals("dog") || newAnimal.equals("Dog")) {
+				determineGender(gender);
+			}
+			
+			//check if its a cat
+			else if (newAnimal.equals("cat") || newAnimal.equals("Cat")) {
+				determineGender(gender);
+			}
+			
+			//check if its a zebra
+			else if (newAnimal.equals("zebra") || newAnimal.equals("Zebra")) {
+				determineGender(gender);
+			}
+			
+			//I dont care
+			else {
+				System.out.println("We don't accept that animal");
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		chooseRoom("Dog", false, 'M');
+		//chooseRoom("Cat", false, 'F');
+		
+//		int myInt = 10;
+//		double mySecondInt = 3.0;
+//		double result = myInt * mySecondInt;
+//		System.out.println(result);
+		
+//		double temperature = 77.5;
+//		
+//		if (temperature >= 77.5 && temperature <= 120) {
+//			System.out.println("Its Hot");
+//		}
+//		else if (temperature >= 15 && temperature < 77.5) {
+//			System.out.println("Its livable");
+//		}
+//		else {
+//			System.out.println("Screw this");
+//		}
+		
+	}
+
+}
