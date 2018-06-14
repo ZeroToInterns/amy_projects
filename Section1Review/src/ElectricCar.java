@@ -9,12 +9,12 @@ public class ElectricCar {
 	public ElectricCar(String make, int maxRange) {
 		this.make = make;
 		this.maxRange = maxRange;
-		currentRange = 0;
+		this.currentRange = 0;
 	}
 	
 	//charges the ElectricCar to its maximum range
 	public void charge() {
-		currentRange = maxRange;
+		this.currentRange = maxRange;
 	}
 	
 	//drives the car the given distance
@@ -22,7 +22,9 @@ public class ElectricCar {
 		if (miles > currentRange) {
 			System.out.println("You can't drive that far");
 		}
-		currentRange -= miles;
+		else{
+			this.currentRange -= miles;
+		}
 	}
 	
 	//gets the make of the ElectricCar
