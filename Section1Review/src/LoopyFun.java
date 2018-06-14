@@ -16,7 +16,7 @@ public class LoopyFun {
 	//removes duplicates from a String
 	public String removeDuplicates(String word) {
 		if (word.length() == 0) {
-			throw new IndexOutOfBoundsException("It is an empty string");
+			throw new NullPointerException("It is an empty string");
 		}
 		String finalWord = word.substring(0,1);
 		for (int i = 1; i < word.length(); i++) {
@@ -58,11 +58,12 @@ public class LoopyFun {
 		return product;
 	}
 	
-	//gets the largest integer x to makes the expression less than the value given
+	//gets the largest integer x that makes 2 to the power of x less than the value given
 	public int largestPowerLessThan(int value) {
 		int largestInt = 0;
 		int count = 0;
-		if (Math.pow(2, count) > value) {
+		//if there are no powers of 2 less than the target, return -1
+		if (Math.pow(2, count) >= value) {
 			return -1;
 		}
 		while (Math.pow(2, count ) < value) {
@@ -76,9 +77,7 @@ public class LoopyFun {
 	public int sumOdd(int value) {
 		int sum = 0;
 		for (int i = 1; i < value; i = i + 2) {
-			if (i < value ) {
-				sum += i;
-			}
+			sum += i;
 		}
 		return sum;
 	}
