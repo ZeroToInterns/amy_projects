@@ -17,11 +17,11 @@ public class Tester {
 		
 		//inserts Green into the array list at the first position
 		ArrayListPractice.insertFirst(colorList, "Green");
-		System.out.println(colorList.get(0));
+		System.out.println(colorList.toString());
 		
 		//inserts Orange into the array list at the second to last position
 		ArrayListPractice.addSecondToLast(colorList, "Orange");
-		System.out.println(colorList.get(colorList.size() - 2));
+		System.out.println(colorList.toString());
 		
 		//test colorCount
 		System.out.println(ArrayListPractice.colorCount(colorList, "Yellow"));
@@ -30,8 +30,7 @@ public class Tester {
 	
 		//replace Yellow with Red in the array list
 		ArrayListPractice.replace("Yellow", "Red", colorList);
-		System.out.println(colorList.get(3));
-		System.out.println(colorList.get(11));
+		System.out.println(colorList.toString());
 	}
 
 }

@@ -12,7 +12,7 @@ public class ArrayListPractice {
 		list.add(list.size() - 1, color);
 	}
 	
-	//counts the number of elements specified in the array list
+	//counts the number of how many times the element specified exist in the array list
 	public static int colorCount(ArrayList<String> list, String color) {
 		int count = 0;
 		for (int i = 0; i < list.size(); i++) {
