@@ -20,6 +20,7 @@ public class StringManipulation {
 		
 		//prints 3 characters of the name starting at index 4
 		System.out.println(fullName.substring(4, 7));
+		scan.close();
 	}
 
 }

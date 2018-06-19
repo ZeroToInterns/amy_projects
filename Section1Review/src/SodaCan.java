@@ -1,5 +1,5 @@
 
-public class SodaCan implements Comparable{
+public class SodaCan implements Comparable<SodaCan>{
 
 	public static final double DEFAULT_RADIUS = 1.2109;
 	public static final double DEFAULT_HEIGHT = 4.704;
@@ -41,7 +41,12 @@ public class SodaCan implements Comparable{
 	
 	//simulates drinking from SodaCan by subtracting fluidOunces from the contents
 	public void drink(double fluidOunces) {
-		content -= fluidOunces;
+		if (fluidOunces > content) {
+			System.out.println("You don't have enought soda to drink that much");
+		}
+		else {
+			content -= fluidOunces;
+		}
 	}
 	
 	//gets the fl. oz. of soda remaining in the SodaCan
@@ -51,8 +56,7 @@ public class SodaCan implements Comparable{
 	
 	@Override
 	//compares the current content of the SodaCan to another SodaCan
-	public int compareTo(Object o) {
-		SodaCan otherCan = (SodaCan) o;
+	public int compareTo(SodaCan otherCan) {
 		if (content > otherCan.content) {
 			return 1;
 		}

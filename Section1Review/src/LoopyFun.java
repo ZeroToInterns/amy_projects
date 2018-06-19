@@ -1,3 +1,4 @@
+import java.util.HashSet;
 import java.util.Scanner;
 public class LoopyFun {
 
@@ -16,12 +17,25 @@ public class LoopyFun {
 	//removes duplicates from a String
 	public String removeDuplicates(String word) {
 		if (word.length() == 0) {
-			throw new NullPointerException("It is an empty string");
+			throw new RuntimeException();
 		}
-		String finalWord = word.substring(0,1);
-		for (int i = 1; i < word.length(); i++) {
+		String finalWord = "";
+		for (int i = 0; i < word.length(); i++) {
 			if (!finalWord.contains(word.substring(i, i + 1))) {
 				finalWord += word.substring(i, i + 1);
+			}
+		}
+		return finalWord;
+	}
+	
+	//removes duplicates using a hashset
+	public String removeDuplicatesHashSet(String word) {
+		HashSet<String> set = new HashSet<String>();
+		String finalWord = "";
+		for (int i = 0; i < word.length(); i++) {
+			String currentLetter = word.substring(i, i + 1);
+			if (set.add(currentLetter)) {
+				finalWord += currentLetter;
 			}
 		}
 		return finalWord;
@@ -33,8 +47,8 @@ public class LoopyFun {
 			return 0;
 		}
 		double sum = 0;
-		for (int i = 1; i <= n; i++) {
-			sum += 4 / Math.pow(2, i);
+		for (int i = 0; i < n; i++) {
+			sum += 2 / Math.pow(2, i);
 		}
 		return sum;
 	}

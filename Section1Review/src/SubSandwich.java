@@ -20,7 +20,7 @@ public class SubSandwich {
 		}
 		//if size is not 6 or 12, sets the size to 12
 		if (theSize != 6 && theSize != 12) {
-			size = 12;
+			this.size = 12;
 		}
 		else {
 			this.size = theSize;
@@ -35,9 +35,11 @@ public class SubSandwich {
 	
 	//sets a new size for the sub
 	public void setSize(int newSize) {
-		//change the size only if newSize is 6 or 12
-		if (newSize == 6 || newSize == 12) {
-			size = newSize;
+		if (newSize != 6 && newSize != 12) {
+			this.size = 12;
+		}
+		else {
+			this.size = newSize;
 		}
 	}
 	
