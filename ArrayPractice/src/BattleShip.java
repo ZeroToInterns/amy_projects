@@ -50,7 +50,7 @@ public class BattleShip {
 			if (grid[y][x]) {
 				System.out.println("Hit!");
 			}
-			else if (!grid[y][x]){
+			else {
 				System.out.println("Missed!");
 			}
 		}
